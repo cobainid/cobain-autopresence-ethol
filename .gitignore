@@ -1,5 +1,5 @@
 node_modules
-credentials.js
+src/credentials.ts
 yarn.lock
 .DS_Store
 dist
