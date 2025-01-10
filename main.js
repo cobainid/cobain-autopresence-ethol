@@ -5,7 +5,6 @@ require("module-alias/register");
 const Config = require("@/config/index.js");
 
 const { Presence } = require("./lib/actions");
-const { ClientRequest } = require("./helpers");
 const confs = require(Config.path.BASE_PATH + "./credentials.js");
 
 const main = async () => {
@@ -15,7 +14,7 @@ const main = async () => {
     Config.whatsapp = config.whatsapp;
 
     try {
-      let success_presence = await Presence(ClientRequest);
+      let success_presence = await Presence();
       console.log(
         `Success presence in config ${Config.ethol.email}:`,
         success_presence,
